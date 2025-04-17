@@ -1,58 +1,192 @@
 {
-    "Title": "Campus Life on the West Side",
-    "Credits": "Created by Adam Smith (amsmith@ucsc.edu).",
-    "InitialLocation": "Kresge",
+    "Title": "qvshbupsz",
+    "Title2": "purgatory",
+    "Credits": "Created by Ethan Akiyama (akiyamaethan@gmail.com).",
+    "InitialLocation": "start",
     "Locations": {
-        "Kresge": {
-            "Body": "This is Kresge College, lots of nice trees.",
+        "start": {
+            "Body": "light floods your eyes. your hands are still gripping the steering wheel but your car is no longer on the road.",
             "Choices": [
                 {
-                    "Text": "South",
-                    "Target": "Porter"
+                    "Text": ">look around",
+                    "Target": "lookAround"
                 }
-            ]
+            ],
+            "Key": "found"
         },
-        "Porter": {
-            "Body": "This is Porter College, the trees are nice here too.",
+        "lookAround": {
+            "Body": "you look outside the car and notice a desecrated deer just in front of your bumper. The road lies further ahead and you are surrounded by towering trees.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Kresge"
+                    "Text": ">check the radio",
+                    "Target": "radio"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Rachel Carson"
+                    "Text": ">get yourself together",
+                    "Target": "getYourselfTogether"
                 }
             ]
         },
-        "Rachel Carson": {
-            "Body": "Rachel Carson College, more sun and fewer trees.",
+        "radio": {
+            "Body": "you click on the radio and static floods your ears. you try AM and suddenly you hear:",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Porter"
-                },
-                {
-                    "Text": "South",
-                    "Target": "Oakes"
+                    "Text": ">get yourself together",
+                    "Target": "getYourselfTogether"
                 }
-            ]
+            ],
+            "Event": "XBLFVQ....XBLFVQ....XBLFVQ",
+            "Event2": "WAKEUP....WAKEUP....WAKEUP"
         },
-        "Oakes": {
-            "Body": "Oakes College, even the buildings have tree bark on them.",
+        "getYourselfTogether": {
+            "Body": "you take a couple of deep breaths before a moment of clarity hits you.",
             "Choices": [
                 {
-                    "Text": "North",
-                    "Target": "Rachel Carson"
+                    "Text": ">start the car",
+                    "Target": "startCar"
                 },
                 {
-                    "Text": "South",
-                    "Target": "Beyond"
+                    "Text": ">check your phone",
+                    "Target": "checkPhone"
+                },
+                {
+                    "Text": ">step outside",
+                    "Target": "stepOutside"
                 }
             ]
         },
-        "Beyond": {
-            "Body": "Grass, don't forget to check for ticks!"
+        "startCar": {
+            "Body": "no luck. damn deer.",
+            "Choices": [
+                {
+                    "Text": ">check your phone",
+                    "Target": "checkPhone"
+                },
+                {
+                    "Text": ">step outside",
+                    "Target": "stepOutside"
+                }
+            ]
+        },
+        "checkPhone": {
+            "Body": "your phone is no longer in your pocket. how strange.",
+            "Choices": [
+                {
+                    "Text": ">check Elena's pocket",
+                    "Target": "checkElenaPhone"
+                }
+            ]
+        },
+        "stepOutside": {
+            "Body": "birds chirp and trees rustle as you exit the car and look around.",
+            "Choices": [
+                {
+                    "Text": ">examine the deer",
+                    "Target": "deer"
+                },
+                {
+                    "Text": ">check the trunk",
+                    "Target": "trunk"
+                }
+            ]
+        },
+        "checkElenaPhone": {
+            "Body": "you hesitantly reach for Elena's pocket. no phone here either.",
+            "Choices": [
+                {
+                    "Text": ">start the car",
+                    "Target": "startCar"
+                },
+                {
+                    "Text": ">step outside",
+                    "Target": "stepOutside"
+                }
+            ]
+        },
+        "deer": {
+            "Body": "you walk over to the dear and realize you still haven't seen any other cars pass on the road ahead. you nearly step on the deer when it suddenly bolts up and darts away.",
+            "Choices": [
+                {
+                    "Text": ">check the trunk",
+                    "Target": "trunk"
+                }
+            ]
+        },
+        "trunk": {
+            "Body": "No food. no water. only a revolver.",
+            "Choices": [
+                {
+                    "Text": ">take revolver",
+                    "Target": "revolver"
+                }
+            ]
+        },
+        "revolver": {
+            "Body": "you grab the revolver and make sure it is loaded. *crack* a twig snaps behind you.",
+            "Choices": [
+                {
+                    "Text": ">turn around",
+                    "Target": "eclipse"
+                }
+            ]
+        },
+        "eclipse": {
+            "Body": "a bear emerges from the trees. you steadily raise your revolver.",
+            "Choices": [
+                {
+                    "Text": ">shoot",
+                    "Target": "shoot1"
+                },
+                {
+                    "Text": ">wait",
+                    "Target": "wait"
+                }
+            ]
+        },
+        "shoot1": {
+            "Body": "*click*                   *click* *click* the bear gets closer.",
+            "Choices": [
+                {
+                    "Text": ">try again",
+                    "Target": "shoot2"
+                }
+            ]
+        },
+        "shoot2": {
+            "Body": "*click*                   *click* *click* the bear is now snarling in your face.",
+            "Choices": [
+                {
+                    "Text": ">wtf",
+                    "Target": "wtf"
+                }
+            ]
+        },
+        "wtf": {
+            "Body": "in fleeting desperation, you verify the gun is no longer loaded before aiming at the bear one last time...",
+            "Choices": [
+                {
+                    "Text": ">click",
+                    "Target": "start"
+                }
+            ]
+        },
+        "wait": {
+            "Body": "the bear comes closer.",
+            "Choices": [
+                {
+                    "Text": ">keep waiting",
+                    "Target": "wait2"
+                }
+            ]
+        },
+        "wait2": {
+            "Body": "the bear draws even closer as you get ready to shoot",
+            "Choices": [
+                {
+                    "Text": ">shoot",
+                    "Target": "shoot2"
+                }
+            ]
         }
     }
 }
