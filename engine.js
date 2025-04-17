@@ -1,5 +1,5 @@
 class Engine {
-
+    vez = 0;
     static load(...args) {
         window.onload = () => new Engine(...args);
     }
